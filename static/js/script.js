@@ -152,12 +152,14 @@ let blackjackGame = {
     'dealer': {'scoreSpan': '#dealer-blackjack-result', 'div': '#dealer-box', 'score': 0},
 };
 
-const YOU = blackjackGame['You'];
+
+const YOU = blackjackGame['you'];
 const DEALER = blackjackGame['dealer'];
 
 document.querySelector('#blackjack-hit-button').addEventListener('click', blackjackHit);
 
 function blackjackHit(){
     let cardImage = document.createElement('img');
-    cardImage
+    cardImage.src = 'static/images/Q.png';
+    document.querySelector(YOU['div']).appendChild(cardImage);
 }
